@@ -29,7 +29,7 @@
     <![endif]-->
     <style type="text/css">
 body {
-  padding-top: 46px;
+  background: #f9f9f9;
 }
 .starter-template {
   padding: 40px 15px;
@@ -40,42 +40,52 @@ body {
 
   <body>
 
-    <div class="navbar navbar-masthead navbar-default navbar-fixed-top" role="navigation">
-     
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+        
+
+   <header class="relative reverse min-y100 table center">
+    <div class="table-cell p1 center object-scale transition-all">
+      
+      <h1 class="h1 caps">Galaxy</h1>
+      <p class="p "><h2 class="mid-gray h2 caps">application framework</h2></p>
+    </div>
+
+     <div class="row " style="max-width:75rem;">
+      <div class="fb-3-laptop fb-6-tablet ">
+        <div class="px-responsive py-responsive fb accent white">
+          <p><h3 class="h3"><a href="typography">Typography</a></h3></p>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
-    
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Findborg Galaxy</h1>
-        <p class="lead">Application Framework</p>
+      <div class="fb-3-laptop fb-6-tablet">
+        <div class="px-responsive py-responsive fb accent white">
+          <p><h3 class="h3">Layouts</h3></p>
+        </div>
       </div>
-
-    </div><!-- /.container -->
+      <div class="clearfix show-tablet "></div>
+      <div class="fb-3-laptop fb-6-tablet">
+        <div class="px-responsive py-responsive fb accent white">
+          <p><h3 class="h3">Javascript</h3></p>
+        </div>
+      </div>
+      <div class="fb-3-laptop fb-6-tablet">
+        <div class="px-responsive py-responsive fb accent white"> 
+          <p><h3 class="h3">Even More...</h3></p>
+        </div>  
+      </div>
+    </div>
+    <div class="absolute b0 l0 p1">
+      <p class="mb0 small mid-gray"><a href="www.findborg.com">A Findborg Coop Project</p>
+    </div>
+    <div class="absolute r0 b0 p1">
+      <a href="//github.com/Findborg-Coop/galaxy">View on Github</a>
+    </div>
+  </header>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
+   
   </body>
 </html>
 
