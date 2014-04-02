@@ -13,6 +13,7 @@
     
     <!-- Galxy core CSS -->
     <link href="../dist/css/galaxy.css" rel="stylesheet">
+    <link href="../dist/js/libs/highlight/styles/tomorrow-night-bright.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     
@@ -58,7 +59,7 @@
       <tbody>
         <tr>
           <td><h1>h1. Findborg heading</h1></td>
-          <td class="type-info">Need to do</td>
+          <td class="type-info">font-size = 2rem | line-height = 3rem</td>
         </tr>
         <tr>
           <td><h2>h2. Findborg heading</h2></td>
@@ -83,13 +84,16 @@
       </tbody>
     </table>
   </div>
- <pre class="prettyprint linenums">
-<code><h1>h1. Findborg heading</h1></code>
-<code><h2>h2. Findborg heading</h2></code>
-<code><h3>h3. Findborg heading</h3></code>
-<code><h4>h4. Findborg heading</h4></code>
-<code><h5>h5. Findborg heading</h5></code>
-<code><h6>h6. Findborg heading</h6></code>
+ <pre>
+<code class="hljs html">
+&lt;h2&gt;h1. Findborg heading&lt;/h1&gt;
+&lt;h2&gt;h2. Findborg heading&lt;/h2&gt;
+&lt;h3&gt;h3. Findborg heading&lt;/h3&gt;
+&lt;h4&gt;h4. Findborg heading&lt;/h4&gt;
+&lt;h5&gt;h5. Findborg heading&lt;/h5&gt;
+&lt;h6&gt;h6. Findborg heading&lt;/h6&gt;
+
+</code>
 </pre>
 
   <p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class.</p>
@@ -117,14 +121,16 @@
       </tbody>
     </table>
   </div>
-{% highlight html %}
-<h1>h1. Findborg heading <small>Secondary text</small></h1>
-<h2>h2. Findborg heading <small>Secondary text</small></h2>
-<h3>h3. Findborg heading <small>Secondary text</small></h3>
-<h4>h4. Findborg heading <small>Secondary text</small></h4>
-<h5>h5. Findborg heading <small>Secondary text</small></h5>
-<h6>h6. Findborg heading <small>Secondary text</small></h6>
-{% endhighlight %}
+<pre><code class="hljs html">
+&lt;h1&gt;h1. Findborg heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;h2. Findborg heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;h3. Findborg heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;h4. Findborg heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;h5. Findborg heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;h6. Findborg heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h6&gt;
+
+</code></pre>
+
 
 
 </section>
@@ -517,9 +523,9 @@ You can use the mark tag to <mark>highlight</mark> text.
 
     
     <!-- Placed at the end of the document so the pages load faster -->
-    
-
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../dist/js/libs/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
 
