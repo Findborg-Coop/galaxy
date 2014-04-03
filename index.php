@@ -10,9 +10,7 @@
 
     <title>Findborg Galaxy - Application Framework</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Galxy core CSS -->
     <link href="dist/css/galaxy.css" rel="stylesheet">
 
@@ -40,9 +38,10 @@ body {
 
   <body>
 
-        
+       
 
    <header class="relative reverse min-y100 table center">
+    <?php include "header.php"; ?>
     <div class="table-cell p1 center object-scale transition-all">
       
       <h1 class="h1 caps">Galaxy</h1>
@@ -68,7 +67,7 @@ body {
       </div>
       <div class="fb-3-laptop fb-6-tablet">
         <div class="px-responsive py-responsive fb accent white"> 
-          <p><h3 class="h3">Even More...</h3></p>
+          <p><a href="#!" class="fb button ml1">Download</a></p>
         </div>  
       </div>
     </div>
@@ -85,22 +84,20 @@ body {
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-   <!-- This is Tracking Code -->
-   <!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["trackPageView"]);
-  _paq.push(["enableLinkTracking"]);
+    <script type='text/javascript'>try{jQuery.noConflict();}catch(e){};</script>
+    <script src="dist/js/libs/highlight/highlight.pack.js"></script>
+  
+    <script type="text/javascript">
+   
+    hljs.initHighlightingOnLoad();
+    </script>
+ 
+    
 
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://www.findborg.com/redeye/";
-    _paq.push(["setTrackerUrl", u+"piwik.php"]);
-    _paq.push(["setSiteId", "1"]);
-    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
+
+
+   <!-- This is Tracking Code -->
+   
   </body>
 </html>
 
