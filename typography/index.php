@@ -36,8 +36,14 @@
  <?php include "../header.php"; ?>
  <?php include "subnav.php"; ?>
 <div id="gogo">
+<div class="relative min-y100 fb accent grey darker" style="min-height:35em;">
+  <h2 class="h1 p4 center">Typography</h2>
+  <p class="absolute b0 l0 p1 mb0">Bottom left</p>
+  <p class="absolute r0 b0 p1 mb0">Bottom right</p>
+</div>
+
    <div class="px-responsive py-responsive js-baseline js-outline">
-<h1 class="h1">Typography</h1>
+
 <div class="row">
   <div class="fb-8-phone">
 <p class="p">Ok,  There are all kinds of ways for you to use the Galaxy Typography.  Take a look around and  see what you think. PS.  Don't blink.</p>

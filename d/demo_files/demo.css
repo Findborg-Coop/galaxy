@@ -1,0 +1,459 @@
+/* Dummy v. 1.0 – For Rapid Prototyping and QA
+
+// Feedback, requests, ideas => http://twitter.com/kerns
+// Fork, Follow, Download => https://github.com/kerns/dummy
+
+// LICENSE
+// Dummy is released under a Creative Commons Attribution-Share Alike 3.0 United States license
+// (http://creativecommons.org/licenses/by-sa/3.0/us/).
+
+*/
+
+/* The Mighty Meyer Reset – http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End reset */
+
+/* Begin Dummy Demo */
+/* Structure */
+#main {
+  max-width:1145px;
+  margin:auto;
+}
+
+/* Typography */
+
+body {
+  background-color: #fff;
+  color:#667777;
+  font: 1.2em/1.5em 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  margin:0;
+  padding:4em 2.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #686F73;
+}
+
+h1,h2,h3 {
+  clear:both;
+  display: block;
+  margin:1.5em 0 .5em -15px;
+  letter-spacing:-.025em;
+}
+
+h1 {
+  font: normal 2.5em/.9em 'Chaparral Pro', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  margin-top: 0;
+  margin-bottom: .5em;
+  padding-top: .2em;
+}
+
+h2 {
+  border-bottom:2px solid #e0e9f0;
+  font: normal 1.8em 'Chaparral Pro', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  padding:.5em 0 .1em 0;
+}
+
+h3 {
+  color:#4b616a;
+  font-size:1em;
+  font-weight: bold;
+  margin-top: 2.5em;
+  margin-bottom: .8em;
+  text-transform: uppercase
+}
+
+h4 {
+  font-size:1em;
+  font-weight: bold;
+  margin: 1.5em 0 .5em 0;
+}
+
+p {
+  clear:both;
+  display: block;
+  margin:0 0 1em 0;
+}
+
+p.note {
+  font-size:.8em;
+  font-style: italic;
+  margin:.5em 0;
+}
+
+p.hero {
+  color:#888;
+  font-size:1.1em;
+  margin-left:-15px;
+}
+
+footer p {
+  color:#a4abac;
+  font-size:.8em;
+  font-style:normal;
+  text-align: center;
+  padding: 8em 0 2em 0;
+}
+
+footer p a, footer p a:visited {
+  color:#7E8586;
+  border-bottom: 1px dotted #B0BBBD;
+}
+
+/* Style & Emphasis */
+strong, b {
+  color:#546264;
+  font-weight:bold
+}
+
+em {
+  font-style:italic;
+}
+
+.mute {
+  color: rgba(255,255,255,.5);
+  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+  font-family: Sans-Serif;
+}
+
+/* Link style */
+a, a:visited {
+  border-bottom:1px dotted #dbc;
+  color:#b47;
+  text-decoration: none;
+  padding-bottom: .1em;
+}
+
+a:hover {
+  color:#d16;
+  border-color:#d9a;
+}
+
+/* Lists */
+ul, ol {
+  display: block;
+  font-size:1em;
+  list-style-position: outside;
+  margin: 1.5em 2em 2em 0;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul ul, ol ol {
+  margin:.5em 0 0 1.2em;
+}
+
+li {
+  margin-bottom: 1.5em
+}
+
+
+/* Table Styles */
+
+table {
+  background: #fff;
+  border-collapse: collapse;
+  font:.8em/1.4em "Lucida Sans Unicode", "Lucida Grande", Lucida, Sans-Serif;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+}
+
+table th {
+  background-color: #343941;
+  color: #fff;
+  font-size: 1em;
+  font-weight: normal;
+  padding: .5em .8em;
+  border: 2px solid #fff;
+  border-width: 0 2px 0 0;
+  background: #343941;
+  background: -moz-linear-gradient(top,  #424a51 0%, #40454f 50%, #343941 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#424a51), color-stop(50%,#40454f), color-stop(100%,#343941));
+  background: -webkit-linear-gradient(top,  #424a51 0%,#40454f 50%,#343941 100%);
+  background: -o-linear-gradient(top,  #424a51 0%,#40454f 50%,#343941 100%);
+  background: -ms-linear-gradient(top,  #424a51 0%,#40454f 50%,#343941 100%);
+  background: linear-gradient(top,  #424a51 0%,#40454f 50%,#343941 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424a51', endColorstr='#343941',GradientType=0 );
+}
+
+table td {
+  border-bottom: 1px solid #efefef;
+  padding: .5em .8em;
+}
+
+/* Draw a heavy border here, mostly for webikit's sake */
+table tr:last-child td {
+  padding-bottom: 1.5em;
+  margin-bottom: 1em;
+  border-bottom: 4px solid #efefef;
+}
+
+table td span {
+  font: italic .9em 'Chaparral Pro', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  display: block;
+}
+
+table tbody tr:hover td {
+  background-color: #fafafa
+}
+
+table code {
+  white-space:nowrap;
+}
+
+/* Some desperate tweaks */
+.text-table th.objective{
+  width:20%;
+  min-width:100px;
+}
+
+.text-table th.output{
+  width:40%;
+}
+
+.image-table code {
+ font-size:.9em;
+}
+
+.image-table td {
+  vertical-align:middle;
+}
+
+/* Snippets */
+/* Wideley used to matte different objects in the demo */
+
+.snippet {
+  margin:1.5em 0;
+  padding:.5em;
+  overflow:hidden;
+  box-shadow: inset 0px 1px 4px rgba(50, 50, 50, 0.8);
+  display: block;
+  max-width:100%;
+  border-radius:4px;
+  background: #dadada;
+  background: -moz-linear-gradient(top,  #dadada 0%, #ffffff 2%, #ffffff 99%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dadada), color-stop(2%,#ffffff), color-stop(99%,#ffffff));
+  background: -webkit-linear-gradient(top,  #dadada 0%,#ffffff 2%,#ffffff 99%);
+  background: -o-linear-gradient(top,  #dadada 0%,#ffffff 2%,#ffffff 99%);
+  background: -ms-linear-gradient(top,  #dadada 0%,#ffffff 2%,#ffffff 99%);
+  background: linear-gradient(top,  #dadada 0%,#ffffff 2%,#ffffff 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dadada', endColorstr='#ffffff',GradientType=0 );
+}
+
+.snippet p.note {
+  margin:.5em 0;
+  line-height: 1.4em;
+}
+
+.code-snippet {
+  background: #1b2029;
+
+}
+
+.code-snippet p.note {
+  border-top: 1px dotted #4e5464;
+  color:#dcecf7;
+  margin:2em  1em .5em 1em;
+  padding-top: 1em; 
+}
+
+.code-snippet p.note b {
+  color:#fff;
+}
+
+.text-snippet {
+  color:#578;
+  background:#e6f0f7;
+  background: -moz-linear-gradient(top,  #dce5ea 0%, #e6f0f7 5%, #e6f0f7 99%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dce5ea), color-stop(5%,#e6f0f7), color-stop(99%,#e6f0f7));
+  background: -webkit-linear-gradient(top,  #dce5ea 0%,#e6f0f7 5%,#e6f0f7 99%);
+  background: -o-linear-gradient(top,  #dce5ea 0%,#e6f0f7 5%,#e6f0f7 99%);
+  background: -ms-linear-gradient(top,  #dce5ea 0%,#e6f0f7 5%,#e6f0f7 99%);
+  background: linear-gradient(top,  #dce5ea 0%,#e6f0f7 5%,#e6f0f7 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dce5ea', endColorstr='#e6f0f7',GradientType=0 );
+}
+
+.text-snippet ul {
+  margin:1em 1em 1em 2.2em;
+  color:#578;
+}
+
+.text-snippet ul li {
+  margin-bottom: .5em;
+}
+
+.text-snippet h4 {
+  color:#578;
+  line-height:1em;
+  font: bold 1.3em Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding:.3em;
+  text-shadow: 0px 1px 0px rgba(255,255,255,1);
+  text-transform: none;
+}
+
+.img-snippet {
+  float:left;
+  clear:both;
+  margin-top: .5em;
+  padding-bottom: .1em;
+}
+
+.img-snippet img {
+  box-shadow: 0 1px 3px #666;
+  border-radius:2px;
+}
+
+.img-snippet a {
+  border-bottom:0;
+}
+
+.thumb-snippet img {
+  border:3px solid #eaeaea;
+  border-radius:3px;
+  margin-right: 2px;
+  width:auto !important;
+}
+
+.thumb-snippet img:hover {
+  border-color:#fff;
+  box-shadow: 0 2px 4px #222;
+}
+
+.table-snippet p.note {
+  margin:1em .5em .5em .5em;
+  text-align: center;
+}
+
+#nav {position:absolute}
+
+#toc {
+  background-color: #fff;
+  position: fixed;
+  width: 200px;
+  right:0;
+  top:50px;
+  z-index: 5000;
+  text-align: right;
+  display: none;
+}
+
+#toc ul {
+  list-style:none;
+}
+
+#toc ul li {
+  margin: 0;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+#toc ul li a {
+  border-bottom: 1px solid #fff;
+  background-color: #efefef;
+  color:#666;
+  display: block;
+  padding:.4em .8em;
+}
+
+#toc ul li a:hover {
+  background-color: #dadada;
+}
+
+#toc ul li ul li a {
+  padding-left:2em;
+  font-weight: normal;
+}
+
+#toc ul ul {
+  margin: 0;
+  font-size:1em;
+}
+
+
+/* Media Queries, to iron out a few wrinkles */
+/* Smartphones + Small screens (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px), (max-width: 580px) {
+
+  body {
+    padding:2em 15px 0 30px;
+    font-size:1em;
+    line-height: 1.4em;
+  }
+
+  .snippet img {
+    width:100%
+  }
+
+  ul, ol {
+    margin:1.5em .5em 1.5em 1em
+  }
+
+}
+
+/* Larger desktops ----------- */
+@media only screen and (min-width : 1025px) {
+
+  body {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    padding: 4em 6em;
+   }
+
+   h1 {
+     font-size: 3.2em;
+     line-height: 1em;
+   }
+
+}
+
+/* eof */

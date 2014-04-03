@@ -1,11 +1,21 @@
-<div class="clearfix leading-3 mb1 fb accent yellow">
+<div class="clearfix leading-3 fb accent grey ">
   <div class="left px1 p bold leading-3"><a href="index.php">Typography</a></div>
   <div class="left px1">
-    <a href="headers.php">Headers</a>
-    <a href="body.php" class="tiny button ml1">Body</a>
+  <div class="fb tiny buttons">
+  <a class="fb button" href="headers.php">Headers</a>
+   <a class="fb button" href="body.php" class="tiny button ml1">Body</a>
+  
+</div>
+<div class="fb tiny buttons">
+  <div class="fb button">A</div>
+  <div class="fb button">B</div>
+  <div class="fb button">C</div>
+</div>
+    
+   
   </div>
   <div class="right px1">
-    <a href="#!">Right</a>
-    <a href="#!" class="button button-small button-gray ml1">Button</a>
+    <a href="#!">Link</a>
+    <a href="#!" class="ml1">Share</a>
   </div>
 </div>
