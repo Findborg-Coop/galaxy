@@ -1,3 +1,5 @@
+<?php include "../config.php"; ?>
+<?php include "../config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,8 +14,8 @@
 
     
     <!-- Galxy core CSS -->
-    <link href="../dist/css/galaxy.css" rel="stylesheet">
-    <link href="../dist/js/libs/highlight/styles/tomorrow-night-bright.css" rel="stylesheet">
+    <link href="<?php echo "$baseURL"; ?>/galaxy/dist/css/galaxy.css" rel="stylesheet">
+    <link href="<?php echo "$baseURL"; ?>/galaxy/dist/js/libs/highlight/styles/tomorrow-night-bright.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     
@@ -66,7 +68,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript">
 jQuery('#gogo').ajaxify({
-    selector : "a:not(.no-ajaxy)", //Selector for elements to ajaxify - without being swapped - e.g. a selection of links
+    selector : "a:nogo(.no-ajaxy)", //Selector for elements to ajaxify - without being swapped - e.g. a selection of links
     requestDelay : 0, //Delay of Pronto request for e.g. fading in / out
     verbosity : 0,  //Debugging level to console: 1 = medium, 2 = verbose
     deltas : true, // true = deltas loaded, false = all scripts loaded

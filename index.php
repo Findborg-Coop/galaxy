@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -46,6 +47,7 @@ body {
       
       <h1 class="h1 caps">Galaxy</h1>
       <p class="p "><h2 class="mid-gray h2 caps">application framework</h2></p>
+      
     </div>
 
      <div class="row " style="max-width:75rem;">

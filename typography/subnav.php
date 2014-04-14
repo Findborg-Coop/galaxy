@@ -2,7 +2,7 @@
   <div class="left px1 p bold leading-3"><a href="index.php">Typography</a></div>
   <div class="left px1">
   <div class="fb tiny buttons">
-  <a class="fb button" href="headers.php">Headers</a>
+  <a class="fb button" href="headers.php">Headings</a>
    <a class="fb button" href="body.php" class="tiny button ml1">Body</a>
   
 </div>
