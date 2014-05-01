@@ -4,7 +4,7 @@
         <div class="left px1">
           <a href="#!">How To Use</a>
           <a href="typography/index.php" class="ml1">Typography</a>
-          <a href="#!" class="ml1">UI</a>
+          <a href="components/index.php" class="ml1">UI</a>
           <a href="#!" class="ml1">Scripts</a>
           <a href="#!" class="ml1">Layouts</a>
         </div>
