@@ -52,23 +52,23 @@ body {
 
      <div class="row " style="max-width:75rem;">
       <div class="fb-3-laptop fb-6-tablet ">
-        <div class="px-responsive py-responsive fb accent white">
+        <div class="px-responsive py-responsive fb accent white fb shadow-1">
           <p><h3 class="h3"><a href="typography">Typography</a></h3></p>
         </div>
       </div>
       <div class="fb-3-laptop fb-6-tablet">
-        <div class="px-responsive py-responsive fb accent white">
+        <div class="px-responsive py-responsive fb accent white fb shadow-1">
           <p><h3 class="h3">Layouts</h3></p>
         </div>
       </div>
       <div class="clearfix show-tablet "></div>
       <div class="fb-3-laptop fb-6-tablet">
-        <div class="px-responsive py-responsive fb accent white">
+        <div class="px-responsive py-responsive fb accent white fb shadow-1">
           <p><h3 class="h3">Javascript</h3></p>
         </div>
       </div>
       <div class="fb-3-laptop fb-6-tablet">
-        <div class="px-responsive py-responsive fb accent white"> 
+        <div class="px-responsive py-responsive fb accent white fb shadow-4"> 
           <p><a href="#!" class="fb button ml1">Download</a></p>
         </div>  
       </div>

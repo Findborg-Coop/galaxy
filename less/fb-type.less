@@ -12,22 +12,120 @@ html,body {
     width: 100%;
 }
 body {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: "robotoregular";
     margin: 0;
     padding: 0;
-    color: #000;
-    font-weight: 400;
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-weight: @base-font-weight;
     line-height: 1.5rem;
     width: 100%;
     -webkit-text-size-adjust:100%;
     background: #fff;
     overflow: hidden;
+    text-rendering: optimizelegibility;
 }
 
 * { 
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     -webkit-touch-callout:none;
 }
+body.antialiased-always {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media only screen and (min-device-pixel-ratio: 1.5) {
+  body.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+//Fixed Typography for total control
+.display-4{
+     font-family: "robotolight";
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 7rem;
+    font-weight: lighter;
+    white-space: nowrap;
+    letter-spacing: -0.01em;
+}
+.display-3{
+    font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 3.5rem;
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+}
+.display-2 {
+  font: 2.8125rem 'robotoregular';
+  color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+  letter-spacing: normal;
+}
+.display-1{
+    font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 2.125rem;
+    letter-spacing: normal;
+}
+.headline{
+    font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 1.5rem;
+    letter-spacing: normal;
+}
+.title{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+}
+.subhead{
+    font-family: 'robotomedium';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
+   
+      font-size: 1rem;
+}
+.body-2{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.875rem;
+    
+}
+.body-1{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.8125rem;
+   
+}
+.caption{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 0.75rem;
+  letter-spacing: 0.02em;
+   
+}
+.menu-text{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+   
+}
+.button{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+   
+}
+.strong, strong{
+  color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+//End of Fixed Typography
+//Note that the although I say fixed it still adjusts to screen sizes
 a, input, textarea, select {
     outline: 0;
 }
@@ -35,26 +133,37 @@ a, input, textarea, select {
 // Base Type Scale
 
 h1, .h1, .f1 {
+      font-family: "robotolight";
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    
   font-size: 2rem;
   line-height: 3rem;
 }
 
 h2, .h2, .f1 {
+  font-family: "robotoregular";
+   color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
 h3, .h3, .f3 {
+  font-family: "robotoregular";
+   color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
 p, .p, .f4, h4, h5, h6, dl, ol, ul {
+    font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+ 
   font-size: 1.125rem;
   line-height: 1.5rem;
 }
 
 small, .small, .f5 {
+  font-family: "robotothin";
   font-size: .875rem;
   line-height: 1.5rem;
 }
@@ -104,7 +213,8 @@ a {
 
 // Utilities
 
-strong, .bold { font-weight: bold; }
+strong, .bold { font-weight: bold;  color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+}
 .regular { font-weight: normal; }
 .italic { font-style: italic; }
 .caps { text-transform: uppercase; letter-spacing: .2em; }
@@ -126,3 +236,15 @@ strong, .bold { font-weight: bold; }
 .leading-2 { line-height: 2rem; }
 .leading-3 { line-height: 3rem; }
 .leading-4 { line-height: 4rem; }
+
+// White text color
+
+.white-text {
+     color: rgba(red(@white-text-color), green(@white-text-color), blue(@white-text-color), @text-color-opacity);
+ }
+.white-text-light {
+     color: rgba(red(@white-text-color), green(@white-text-color), blue(@white-text-color),  @alternate-text-color-opacity);
+ }
+.text-shadow {
+    text-shadow: 1px 1px 3px rgba(0,0,0,.8);
+}

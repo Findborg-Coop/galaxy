@@ -1,5 +1,5 @@
 <div class="clearfix leading-3 fb accent grey ">
-  <div class="left px1 p bold leading-3"><a href="index.php">Typography</a></div>
+  <div class="left px1 p bold leading-3"><a href="index.php" style="color:red;">Typography</a></div>
   <div class="left px1">
   <div class="fb tiny buttons">
   <a class="fb button" href="headers.php">Headings</a>

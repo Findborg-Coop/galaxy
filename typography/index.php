@@ -14,9 +14,9 @@
 
     
     <!-- Galxy core CSS -->
+   
     <link href="<?php echo "$baseURL"; ?>/galaxy/dist/css/galaxy.css" rel="stylesheet">
-    <link href="<?php echo "$baseURL"; ?>/galaxy/dist/js/libs/highlight/styles/tomorrow-night-bright.css" rel="stylesheet">
-
+    
     <!-- Custom styles for this template -->
     
     
@@ -28,70 +28,115 @@
 
     
       <style type="text/css">
-      body{background: #f9f9f9;overflow: scroll;}
-      #super-container {
-    background: #e3e3e3;
-    text-align: center;
-}
-#super-container a {
-    padding: 25px;
-    display: block;
-}
+      body{overflow: scroll;}
+      
 
-
-.scotch-panel h2 {
-    margin: 0;
-    color: #fff;
-    padding: 20px;
-}
-#super-container a {
-    color: #222;
-    background: transparent;
-}
-#super-container a:hover {
-    background: #737373;
-}
       </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    
+  
+     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
-  <div id="scotch-panel"class="scotch-panel fb red trans5" data-direction="left" data-clickSelector=".toggle-left" >
-                            <h2>WEST SIDE</h2>
-                        </div>
-                        <div class="scotch-panel fb green trans5" data-direction="top" data-clickSelector=".toggle-top">
-                            <h2>NORTH SIDE</h2>
-                        </div>
-                        <div class="scotch-panel" data-direction="bottom" data-clickSelector=".toggle-bottom">
-                            <h2>SOUTH SIDE</h2>
-                        </div>
-                        <div class="scotch-panel fb purple trans5" data-direction="right" data-clickSelector=".toggle-right">
-                            <h2>EAST SIDE</h2>
-                        </div>
- <?php include "../header.php"; ?>
- <?php include "subnav.php"; ?>
+  
+ 
+ <style>
+.fb-app {
+   
+   margin: 0px;
+   padding: 0px;
+   display: -webkit-flex;
+   display:         flex;
+   -webkit-flex-flow: row;
+           flex-flow: row;
+   }
+ 
+  .fb-app > .fb-app-content {
+     
+   -webkit-flex: 3 1 60%;
+           flex: 3 1 60%;
+   -webkit-order: 2;
+           order: 2;
+   }
+  
+  .fb-app > nav {
+   
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 1;
+           order: 1;
+   }
+  
+  .fb-app > aside {
+   
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 3;
+           order: 3;
+   }
+ 
+  header, footer {
+   display: block;
+   
+   
+   }
+ 
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   .fb-app, #page {
+    -webkit-flex-flow: column;
+            flex-flow: column;
+            flex-direction: column;
+   }
+
+   .fb-app > .fb-app.content, .fb-app > nav, .fb-app > aside {
+    /* Return them to document order */
+    -webkit-order: 0;
+            order: 0;
+   }
+  
+   .fb-app > nav, .fb-app > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+   }
+  }
+
+ </style>
+  
+ <header class="fb bg blue"><?php include "../header.php"; ?>
+ <?php include "subnav.php"; ?></header>
+ <div class='fb-app' >
+    <div class="fb-app-content fb bg blue level1 p1">Galaxy UI Components
+
+A collection of elements that will help you build and add on to your website or application.
+
+I want to build and piece together re-usable UI components that will make it easy for anyone to build readable and usable websites or applications.
+
+The main goal is to build application styles that are usable and responsive to any screen size.
+
+One thing you will notice about the Galaxy Framework is that you can build normal websites or you can build application style websites. Galaxy is very flexible. You can even use it to build only Tablet or Mobile applications. I am taking great care to use html 5 and or css3 only where I can. I do this in hopes to eliminate as much javascript as I can. The reason being is I want to be able to use Galaxy with any outside javascript that I want. This is a big problem with other frameworks such as Bootstrap. I kept running into javascript conflicts. That being said, I find myself falling back on a lot of jquery to get things done.
+    </div>
+    <nav class="fb bg blue level2 p1">nav</nav>
+    <aside class="fb bg blue level9 white-text text-shadow p1">aside</aside>
+    
+ </div>
+ <footer class="fb bg blue p1">footer</footer>
 <div id="gogo">
-<div class="relative min-y100 fb accent grey darker" style="min-height:35em;">
-  <h2 class="h1 p4 center">Typography</h2>
+<div class="relative min-y100 fb bg grey level6" style="min-height:35em;">
+  <h2 class="h1 white-text text-shadow p4 center">Typography</h2>
   <p class="absolute b0 l0 p1 mb0">Bottom left
-<div id="super-container">
-                        
 
-
-                        <a href="#" class="toggle-top">Toggle Top</a>
-                        <a href="#" class="toggle-left">Toggle Left</a>
-                        <a href="#" class="toggle-right">Toggle Right</a>
-                        <a href="#" class="toggle-bottom">Toggle Bottom</a>
-
-                    </div>
   </p>
   <p class="absolute r0 b0 p1 mb0">Bottom right</p>
 </div>
 
    <div class="px-responsive py-responsive js-baseline js-outline">
 <section>
-<p class="p">
+<p class="p fb shadow bottom">
     <!-- Headings -->
   <h2 class="h2">Galaxy Headings</h2>
   <p class="h3">All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
@@ -100,11 +145,12 @@
 <div class="row">
 
   <div class="fb-12-phone fb-6-desktop">
-  <div class="fb-12-phone fb accent green lighter"><h2>Normal Headings</h2></div>
+  <div class="fb-12-phone fb bg green level2 fb shadow"><h2>Normal Headings</h2></div>
 <p class="p">
   <div class="bs-example bs-example-type">
     <h1>This is what a heading looks like when you use Findborg Galaxy aka <code>H1</code></h1>
     <p>This is just some normal text to compare it with.</p>
+    <div class="centered p1 circle bg-red white-text centered p1" style="height:70px;width:70px;">H<br>Hello</div>
  
           
         
@@ -134,14 +180,14 @@
 
   </div>
   <div class="fb-12-phone fb-6-desktop">
-  <div class="fb-12-phone  fb accent blue lighter"><h2>Matched Headings</h2></div>
+  <div class="fb-12-phone  fb bg blue level2 fb shadow-1"><h2>Matched Headings</h2></div>
     <div class="bs-example bs-example-type">
-    <span class="h1">This is what a heading looks like when you use Findborg Galaxy</span>
+    <span class="f1">This is what a heading looks like when you use Findborg Galaxy</span>
     <p class="regular">This is just some normal text to compare it with.</p>
  
           
         
-        <h2>The <code>H2</code> Tag Takes Over The World</h2>
+        <span class="f2">The <code>H2</code> Tag Takes Over The World</span>
           <p>This is just some normal text to compare it with.</p>
           
         
@@ -189,10 +235,89 @@
 </div>
   
   <!-- Using Less -->
-  <div class="h2 p2 fb accent orange lighter">
+  <div class="h2 p2 fb bg orange level1">
   <h3>Built with Less</h3>
-  <p>The typographic scale is based on the EM scale and controled by Less variables in <strong>variables.less</strong>: Ex: <code>@font-size-base</code>. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Findborg adapts.</p>
+  <p>The typographic scale is based on the EM scale and controled by Less variables in <strong>variables.less</strong>: Ex: <code>@font-size-base</code>. 
+  We use those variables and some simple math to create the margins, paddings, 
+  and line-heights of all our type and more. Customize them and Galaxy adapts.</p>
   </div>
+
+  <!-- Controlled Text -->
+<h2>Control Text When Needed</h2>
+<p class="p p2 fb bg blue-grey level2">I am going to build in some classes that will allow you to control or should I say Fix the text the way you want to.</p>
+  <div class="row">
+    <div class="fb-4-desktop body-2">
+      Typographic Scale & Basic Styles
+
+Too many type sizes and styles at once can wreck any layout. A typographic scale is a limited set of type sizes that work well together, along with the layout grid. The basic set of styles are based on a typographic scale of 12, 14, 16, 20, and 34.
+
+These sizes and styles balance content density and reading comfort under typical usage conditions. Type sizes are specified with SP (scaleable pixels) to enable large-type modes for accessibility.
+    </div>
+    <div class="fb-2-desktop">
+      <ul class="fb list-simple">
+        <li class="caption">Display 4 </li>
+        <li>Display 3</li>
+        <li class="caption">Display 2</li>
+        <li >Display 1</li>
+        <li class="caption">Headline</li>
+        <li>Title</li>
+        <li class="caption">SubHead</li>
+        <li>Body 2</li>
+        <li class="caption">Body 1</li>
+        <li>Caption</li>
+        <li class="caption">Menu</li>
+        <li>Button</li>
+      </ul>
+    </div>
+    <div class="fb-6-desktop"> 
+    <h1 class="leading-4 mb2 display-4">Display 4</h1>
+<h2 class="leading-3 display-3">Display 3</h2>
+<span class="display-2">Display 2</span>
+<h4 class="display-1">Display 1</h4>
+<p class="headline">Headline - Get Some Galaxy</p>
+<p class="title">Title - How To Control Text</p>
+<p class="subhead">Subhead - Using The Galaxy Framework</p>
+<p class="body-2">Body 2 - Using The Galaxy Framework</p>
+<p class="body-1">Body 1 - Using The Galaxy Framework</p>
+<p class="caption">Caption - Galaxy Framework Rocks</p>
+<p class="menu-text">Menu Text - Goto the Download Page</p>
+<p class="button">Button - just push it</p>
+<p class="body-2 strong">Make it stand out of the crowd</p>
+    </div>
+  </div>
+  <!-- End of Controlled Text -->
+  <!-- PARAGRAPH SPACEING -->
+<div class="row">
+  <div class="fb-12-desktop">
+    <p style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="p text-shadow"style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p class="leading-4"style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p class="body-2"style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p class="body-1"style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ 
+  </div>
+</div>
+  
+
+  <!-- END OF PARAGRAPH SPACING -->
+
+<!-- White Text Testing Area -->
+<div class="fill fb bg grey level9">
+<div class="row ">
+  <div class="fb-12-desktop">
+    <p class="white-text text-shadow fb bg blue-grey" style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="p white-text-light "style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p class="leading-4 white-text"style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p class="body-2 white-text"style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p class="body-1 white-text-light"style="max-width: 27em;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+ 
+  </div>
+</div>
+</div>
+<!-- End of White Text Testing Area -->
+
+
+
   <!-- Inline text elements -->
   <hr>
   <h2 id="type-inline-text">Inline text elements</h2>
@@ -407,7 +532,7 @@
     <h3>Unordered</h3>
   <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
   <div class="bs-example">
-    <ul>
+    <ul class="fb list">
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
       <li>Integer molestie lorem at massa</li>
@@ -431,7 +556,7 @@
     <h3>Ordered</h3>
   <p>A list of items in which the order <em>does</em> explicitly matter.</p>
   <div class="bs-example">
-    <ol>
+    <ol class="fb list">
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
       <li>Integer molestie lorem at massa</li>
@@ -448,7 +573,7 @@
     <h3>Unstyled</h3>
   <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
   <div class="bs-example">
-    <ul class="list-unstyled">
+    <ul class="fb list-simple">
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
       <li>Integer molestie lorem at massa</li>
@@ -478,10 +603,10 @@
   <h3>Inline List Basic</h3>
   <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.  Use helper classes to style the way you want.</p>
   <div class="bs-example">
-    <ul class="list-inline caps">
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
+    <ul class="list-inline caps menu-text">
+      <li>item-1</li>
+      <li>item-2</li>
+      <li>item-3</li>
     </ul>
   </div>
 
@@ -1264,6 +1389,27 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
   <h2 id="forms-example">Basic example</h2>
   <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+  <form>
+
+    <div class="group">      
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Name</label>
+    </div>
+
+    <div class="group">      
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Email</label>
+    </div>
+
+  </form>
+
+
+
+
   <div class="bs-example">
     <form role="form">
       <div class="form-group">
@@ -1946,7 +2092,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <h2>Galaxy Framework Colors</h2>
   <div class="row">
   <div class="fb-4-desktop">
-    <div class="p1 fb accent red"style="height:120px;">Red</div>
+    <div class="p1 bg-red"style="height:120px;">Red</div>
     <div class="p1 fb bg red level1">Level 1<div class="right px1" style="background:#fde0dc;">Match</div></div>
     <div class="p1 fb bg red level2">Level 2<div class="right px1" style="background:#f9bdbb;">Match</div></div>
     <div class="p1 fb bg red level3">Level 3<div class="right px1" style="background:#f69988;">Match</div></div>
@@ -2467,30 +2613,238 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <!-- End of Colors Section -->
 <!-- Edit everything above -->
 <!-- TESTING LIST -->
-<ul class="row p2 fb red trans3">
-  <li class="fb-3-desktop fb bg blue">I</li>
-  <li class="fb-3-desktop fb bg red">will</li>
-  <li class="fb-3-desktop fb bg green">rock</li>
-  <li class="fb-3-desktop fb bg blue level3">you</li>
+<ul class="fb list-simple row p2 fb red trans3">
+  <li class="fb-3-desktop fb bg blue center fb shadow-1">Galaxy</li>
+  <li class="fb-3-desktop fb bg red center fb shadow-1">Will</li>
+  <li class="fb-3-desktop fb bg green center fb shadow-1">Rock</li>
+  <li class="fb-3-desktop fb bg blue center level3 fb shadow-1">You</li>
 </ul>
+
+<!-- SHADOWS THAT SHINE -->
+<section>
+  <h2 class="display-2 mt1">Shadows That Shine</h2>
+  <div class="row mt1">
+    <div class="fb-1-5-desktop"><div class="fb bg blue-grey level1 fb shadow-1">Shadow One</div></div>
+    <div class="fb-1-5-desktop"><div class="fb bg blue-grey level1 fb shadow-2">Shadow Two</div></div>
+    <div class="fb-1-5-desktop"><div class="fb bg blue-grey level1 fb shadow-3">Shadow Four</div></div>
+    <div class="fb-1-5-desktop"><div class="fb bg blue-grey level1 fb shadow-4">Shadow Four</div></div>
+    <div class="fb-1-5-desktop"><div class="fb bg blue-grey level1 fb shadow-4">Shadow Five</div></div>
+  </div>
+</section>
+<!-- END OF SHADOWS THAT SHINE -->
+<!-- ICONS THAT ROCK -->
+<section>
+  <div class="row">
+    <div class="fb-12-desktop">
+        <h1>Material Icons</h1>
+
+
+<h1>action</h1>
+<div class="fb bg blue-grey level1 p1"><img src='../dist/img/action/3x_ios/ic_3d_rotation_black_24dp.png' ><br>3d rotation</div>
+<div><img src='../dist/img/action/3x_ios/ic_accessibility_black_24dp.png'><br>accessibility</div>
+<div><img src='../dist/img/action/3x_ios/ic_account_balance_black_24dp.png'><br>account balance</div>
+<div><img src='./action/svg/ic_account_balance_wallet_24px.svg'><br>account balance wallet</div>
+<div><img src='./action/svg/ic_account_box_24px.svg'><br>account box</div>
+<div><img src='./action/svg/ic_account_child_24px.svg'><br>account child</div>
+<div><img src='./action/svg/ic_account_circle_24px.svg'><br>account circle</div>
+<div><img src='./action/svg/ic_add_shopping_cart_24px.svg'><br>add shopping cart</div>
+<div><img src='./action/svg/ic_alarm_24px.svg'><br>alarm</div>
+<div><img src='./action/svg/ic_alarm_add_24px.svg'><br>alarm add</div>
+<div><img src='./action/svg/ic_alarm_off_24px.svg'><br>alarm off</div>
+<div><img src='./action/svg/ic_alarm_on_24px.svg'><br>alarm on</div>
+<div><img src='./action/svg/ic_android_24px.svg'><br>android</div>
+<div><img src='./action/svg/ic_announcement_24px.svg'><br>announcement</div>
+<div><img src='./action/svg/ic_aspect_ratio_24px.svg'><br>aspect ratio</div>
+<div><img src='./action/svg/ic_assessment_24px.svg'><br>assessment</div>
+<div><img src='./action/svg/ic_assignment_24px.svg'><br>assignment</div>
+<div><img src='./action/svg/ic_assignment_ind_24px.svg'><br>assignment ind</div>
+<div><img src='./action/svg/ic_assignment_late_24px.svg'><br>assignment late</div>
+<div><img src='./action/svg/ic_assignment_return_24px.svg'><br>assignment return</div>
+<div><img src='./action/svg/ic_assignment_returned_24px.svg'><br>assignment returned</div>
+<div><img src='./action/svg/ic_assignment_turned_in_24px.svg'><br>assignment turned in</div>
+<div><img src='./action/svg/ic_autorenew_24px.svg'><br>autorenew</div>
+<div><img src='./action/svg/ic_backup_24px.svg'><br>backup</div>
+<div><img src='./action/svg/ic_book_24px.svg'><br>book</div>
+<div><img src='./action/svg/ic_bookmark_24px.svg'><br>bookmark</div>
+<div><img src='./action/svg/ic_bookmark_outline_24px.svg'><br>bookmark outline</div>
+<div><img src='./action/svg/ic_bug_report_24px.svg'><br>bug report</div>
+<div><img src='./action/svg/ic_cached_24px.svg'><br>cached</div>
+<div><img src='./action/svg/ic_class_24px.svg'><br>class</div>
+<div><img src='./action/svg/ic_credit_card_24px.svg'><br>credit card</div>
+<div><img src='./action/svg/ic_dashboard_24px.svg'><br>dashboard</div>
+<div><img src='./action/svg/ic_delete_24px.svg'><br>delete</div>
+<div><img src='./action/svg/ic_description_24px.svg'><br>description</div>
+<div><img src='./action/svg/ic_dns_24px.svg'><br>dns</div>
+<div><img src='./action/svg/ic_done_24px.svg'><br>done</div>
+<div><img src='./action/svg/ic_done_all_24px.svg'><br>done all</div>
+<div><img src='./action/svg/ic_event_24px.svg'><br>event</div>
+<div><img src='./action/svg/ic_exit_to_app_24px.svg'><br>exit to app</div>
+<div><img src='./action/svg/ic_explore_24px.svg'><br>explore</div>
+<div><img src='./action/svg/ic_extension_24px.svg'><br>extension</div>
+<div><img src='./action/svg/ic_face_unlock_24px.svg'><br>face unlock</div>
+<div><img src='./action/svg/ic_favorite_24px.svg'><br>favorite</div>
+<div><img src='./action/svg/ic_favorite_outline_24px.svg'><br>favorite outline</div>
+<div><img src='./action/svg/ic_find_in_page_24px.svg'><br>find in page</div>
+<div><img src='./action/svg/ic_find_replace_24px.svg'><br>find replace</div>
+<div><img src='./action/svg/ic_flip_to_back_24px.svg'><br>flip to back</div>
+<div><img src='./action/svg/ic_flip_to_front_24px.svg'><br>flip to front</div>
+<div><img src='./action/svg/ic_get_app_24px.svg'><br>get app</div>
+<div><img src='./action/svg/ic_grade_24px.svg'><br>grade</div>
+<div><img src='./action/svg/ic_group_work_24px.svg'><br>group work</div>
+<div><img src='./action/svg/ic_help_24px.svg'><br>help</div>
+<div><img src='./action/svg/ic_highlight_remove_24px.svg'><br>highlight remove</div>
+<div><img src='./action/svg/ic_history_24px.svg'><br>history</div>
+<div><img src='./action/svg/ic_home_24px.svg'><br>home</div>
+<div><img src='./action/svg/ic_https_24px.svg'><br>https</div>
+<div><img src='./action/svg/ic_info_24px.svg'><br>info</div>
+<div><img src='./action/svg/ic_info_outline_24px.svg'><br>info outline</div>
+<div><img src='./action/svg/ic_input_24px.svg'><br>input</div>
+<div><img src='./action/svg/ic_invert_colors_24px.svg'><br>invert colors</div>
+<div><img src='./action/svg/ic_label_24px.svg'><br>label</div>
+<div><img src='./action/svg/ic_label_outline_24px.svg'><br>label outline</div>
+<div><img src='./action/svg/ic_language_24px.svg'><br>language</div>
+<div><img src='./action/svg/ic_launch_24px.svg'><br>launch</div>
+<div><img src='./action/svg/ic_list_24px.svg'><br>list</div>
+<div><img src='./action/svg/ic_lock_24px.svg'><br>lock</div>
+<div><img src='./action/svg/ic_lock_open_24px.svg'><br>lock open</div>
+<div><img src='./action/svg/ic_lock_outline_24px.svg'><br>lock outline</div>
+<div><img src='./action/svg/ic_loyalty_24px.svg'><br>loyalty</div>
+<div><img src='./action/svg/ic_markunread_mailbox_24px.svg'><br>markunread mailbox</div>
+<div><img src='./action/svg/ic_note_add_24px.svg'><br>note add</div>
+<div><img src='./action/svg/ic_open_in_browser_24px.svg'><br>open in browser</div>
+<div><img src='./action/svg/ic_open_in_new_24px.svg'><br>open in new</div>
+<div><img src='./action/svg/ic_open_with_24px.svg'><br>open with</div>
+<div><img src='./action/svg/ic_pageview_24px.svg'><br>pageview</div>
+<div><img src='./action/svg/ic_payment_24px.svg'><br>payment</div>
+<div><img src='./action/svg/ic_perm_camera_mic_24px.svg'><br>perm camera mic</div>
+<div><img src='./action/svg/ic_perm_contact_cal_24px.svg'><br>perm contact cal</div>
+<div><img src='./action/svg/ic_perm_data_setting_24px.svg'><br>perm data setting</div>
+<div><img src='./action/svg/ic_perm_device_info_24px.svg'><br>perm device info</div>
+<div><img src='./action/svg/ic_perm_identity_24px.svg'><br>perm identity</div>
+<div><img src='./action/svg/ic_perm_media_24px.svg'><br>perm media</div>
+<div><img src='./action/svg/ic_perm_phone_msg_24px.svg'><br>perm phone msg</div>
+<div><img src='./action/svg/ic_perm_scan_wifi_24px.svg'><br>perm scan wifi</div>
+<div><img src='./action/svg/ic_picture_in_picture_24px.svg'><br>picture in picture</div>
+<div><img src='./action/svg/ic_polymer_24px.svg'><br>polymer</div>
+<div><img src='./action/svg/ic_print_24px.svg'><br>print</div>
+<div><img src='./action/svg/ic_query_builder_24px.svg'><br>query builder</div>
+<div><img src='./action/svg/ic_question_answer_24px.svg'><br>question answer</div>
+<div><img src='./action/svg/ic_receipt_24px.svg'><br>receipt</div>
+<div><img src='./action/svg/ic_redeem_24px.svg'><br>redeem</div>
+<div><img src='./action/svg/ic_reorder_24px.svg'><br>reorder</div>
+<div><img src='./action/svg/ic_report_problem_24px.svg'><br>report problem</div>
+<div><img src='./action/svg/ic_restore_24px.svg'><br>restore</div>
+<div><img src='./action/svg/ic_room_24px.svg'><br>room</div>
+<div><img src='./action/svg/ic_schedule_24px.svg'><br>schedule</div>
+<div><img src='./action/svg/ic_search_24px.svg'><br>search</div>
+<div><img src='./action/svg/ic_settings_24px.svg'><br>settings</div>
+<div><img src='./action/svg/ic_settings_applications_24px.svg'><br>settings applications</div>
+<div><img src='./action/svg/ic_settings_backup_restore_24px.svg'><br>settings backup restore</div>
+<div><img src='./action/svg/ic_settings_bluetooth_24px.svg'><br>settings bluetooth</div>
+<div><img src='./action/svg/ic_settings_cell_24px.svg'><br>settings cell</div>
+<div><img src='./action/svg/ic_settings_display_24px.svg'><br>settings display</div>
+<div><img src='./action/svg/ic_settings_ethernet_24px.svg'><br>settings ethernet</div>
+<div><img src='./action/svg/ic_settings_input_antenna_24px.svg'><br>settings input antenna</div>
+<div><img src='./action/svg/ic_settings_input_component_24px.svg'><br>settings input component</div>
+<div><img src='./action/svg/ic_settings_input_composite_24px.svg'><br>settings input composite</div>
+<div><img src='./action/svg/ic_settings_input_hdmi_24px.svg'><br>settings input hdmi</div>
+<div><img src='./action/svg/ic_settings_input_svideo_24px.svg'><br>settings input svideo</div>
+<div><img src='./action/svg/ic_settings_overscan_24px.svg'><br>settings overscan</div>
+<div><img src='./action/svg/ic_settings_phone_24px.svg'><br>settings phone</div>
+<div><img src='./action/svg/ic_settings_power_24px.svg'><br>settings power</div>
+<div><img src='./action/svg/ic_settings_remote_24px.svg'><br>settings remote</div>
+<div><img src='./action/svg/ic_settings_voice_24px.svg'><br>settings voice</div>
+<div><img src='./action/svg/ic_shop_24px.svg'><br>shop</div>
+<div><img src='./action/svg/ic_shop_two_24px.svg'><br>shop two</div>
+<div><img src='./action/svg/ic_shopping_basket_24px.svg'><br>shopping basket</div>
+<div><img src='./action/svg/ic_shopping_cart_24px.svg'><br>shopping cart</div>
+<div><img src='./action/svg/ic_speaker_notes_24px.svg'><br>speaker notes</div>
+<div><img src='./action/svg/ic_spellcheck_24px.svg'><br>spellcheck</div>
+<div><img src='./action/svg/ic_star_rate_24px.svg'><br>star rate</div>
+<div><img src='./action/svg/ic_stars_24px.svg'><br>stars</div>
+<div><img src='./action/svg/ic_store_24px.svg'><br>store</div>
+<div><img src='./action/svg/ic_subject_24px.svg'><br>subject</div>
+<div><img src='./action/svg/ic_supervisor_account_24px.svg'><br>supervisor account</div>
+<div><img src='./action/svg/ic_swap_horiz_24px.svg'><br>swap horiz</div>
+<div><img src='./action/svg/ic_swap_vert_24px.svg'><br>swap vert</div>
+<div><img src='./action/svg/ic_swap_vert_circle_24px.svg'><br>swap vert circle</div>
+<div><img src='./action/svg/ic_system_update_tv_24px.svg'><br>system update tv</div>
+<div><img src='./action/svg/ic_tab_24px.svg'><br>tab</div>
+<div><img src='./action/svg/ic_tab_unselected_24px.svg'><br>tab unselected</div>
+<div><img src='./action/svg/ic_theaters_24px.svg'><br>theaters</div>
+<div><img src='./action/svg/ic_thumb_down_24px.svg'><br>thumb down</div>
+<div><img src='./action/svg/ic_thumb_up_24px.svg'><br>thumb up</div>
+<div><img src='./action/svg/ic_thumbs_up_down_24px.svg'><br>thumbs up down</div>
+<div><img src='./action/svg/ic_toc_24px.svg'><br>toc</div>
+<div><img src='./action/svg/ic_today_24px.svg'><br>today</div>
+<div><img src='./action/svg/ic_track_changes_24px.svg'><br>track changes</div>
+<div><img src='./action/svg/ic_translate_24px.svg'><br>translate</div>
+<div><img src='./action/svg/ic_trending_down_24px.svg'><br>trending down</div>
+<div><img src='./action/svg/ic_trending_neutral_24px.svg'><br>trending neutral</div>
+<div><img src='./action/svg/ic_trending_up_24px.svg'><br>trending up</div>
+<div><img src='./action/svg/ic_turned_in_24px.svg'><br>turned in</div>
+<div><img src='./action/svg/ic_turned_in_not_24px.svg'><br>turned in not</div>
+<div><img src='./action/svg/ic_verified_user_24px.svg'><br>verified user</div>
+<div><img src='./action/svg/ic_view_agenda_24px.svg'><br>view agenda</div>
+<div><img src='./action/svg/ic_view_array_24px.svg'><br>view array</div>
+<div><img src='./action/svg/ic_view_carousel_24px.svg'><br>view carousel</div>
+<div><img src='./action/svg/ic_view_column_24px.svg'><br>view column</div>
+<div><img src='./action/svg/ic_view_day_24px.svg'><br>view day</div>
+<div><img src='./action/svg/ic_view_headline_24px.svg'><br>view headline</div>
+<div><img src='./action/svg/ic_view_list_24px.svg'><br>view list</div>
+<div><img src='./action/svg/ic_view_module_24px.svg'><br>view module</div>
+<div><img src='./action/svg/ic_view_quilt_24px.svg'><br>view quilt</div>
+<div><img src='./action/svg/ic_view_stream_24px.svg'><br>view stream</div>
+<div><img src='./action/svg/ic_view_week_24px.svg'><br>view week</div>
+<div><img src='./action/svg/ic_visibility_24px.svg'><br>visibility</div>
+<div><img src='./action/svg/ic_visibility_off_24px.svg'><br>visibility off</div>
+<div><img src='./action/svg/ic_wallet_giftcard_24px.svg'><br>wallet giftcard</div>
+<div><img src='./action/svg/ic_wallet_membership_24px.svg'><br>wallet membership</div>
+<div><img src='./action/svg/ic_wallet_travel_24px.svg'><br>wallet travel</div>
+<div><img src='./action/svg/ic_work_24px.svg'><br>work</div>
+<h1>alert</h1>
+
+<h1>av</h1>
+
+<h1>communication</h1>
+
+<h1>content</h1>
+
+<h1>device</h1>
+
+<h1>editor</h1>
+
+<h1>file</h1>
+
+<h1>hardware</h1>
+
+<h1>image</h1>
+
+<h1>maps</h1>
+
+<h1>navigation</h1>
+
+<h1>notification</h1>
+
+<h1>social</h1>
+
+<h1>toggle</h1>
+
+    </div>
+    
+  </div>
+</section>
+
+<!-- END OF ROCKING ICONS -->
     </div><!-- /.container -->
 
-</div>
     <!--  -->
 
     <!--  -->
     <!-- Placed at the end of the document so the pages load faster -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<script src="../js/libs/scotchPanels.js"></script>
-<script type="text/javascript">
-   $('.scotch-panel').scotchPanel({
-                    containerSelector: 'body',
-                    duration: 300,
-                    transition: 'ease',
-                    distanceX: '30%'
-                });
-</script>
   
   </body>
 </html>
